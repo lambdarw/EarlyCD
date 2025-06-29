@@ -10,7 +10,7 @@ MECP is an early-stage multimodal framework that jointly models controversy dete
 ## 🧷 Dataset
 We construct the first English-language short-video dataset TMCD, with 3,061 videos covering 244 real-world topics, annotated with both controversy and popularity scores.
 
-We evaluate our method for event detection on the [TMCD]() and [MMCD](https://github.com/skylie-xtj/MM_Controversy_Detection_Released) datasets.
+We evaluate our method for event detection on the [TMCD](https://pan.quark.cn/s/d55564522cd3) and [MMCD](https://github.com/skylie-xtj/MM_Controversy_Detection_Released) datasets.
 
 
 ## 🚀 Quick Start

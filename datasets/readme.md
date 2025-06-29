@@ -8,6 +8,9 @@ We collected TikTok data through keyword-based crawling between March and April 
 (3) comment metadata (textual content, creator engagement flags, and timestamps), 
 and (4) publisher profile (with follower counts and historical video counts).
 
+## 📥 Download Dataset
+The dataset is publicly accessible and can be downloaded from [https://pan.quark.cn/s/d55564522cd3](https://pan.quark.cn/s/d55564522cd3).
+
 ## 📈 Dataset Analysis
 We developed a keyword list of 244 terms sourced from trending topics on both TikTok and X (formerly Twitter). 
 

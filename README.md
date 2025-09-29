@@ -4,7 +4,7 @@
 MECP is an early-stage multimodal framework that jointly models controversy detection and popularity prediction via a video-guided viewpoint alignment module and a task-aware Mixture-of-Experts component.
 
 <div align=center>
-<img src="https://github.com/lambdarw/MECP/blob/main/img/framework.png" width="70%" >
+<img src="https://github.com/lambdarw/MECP/blob/main/framework.png" width="70%" >
 </div>
 
 ## 🧷 Dataset

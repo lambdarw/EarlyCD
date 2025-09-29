@@ -16,8 +16,8 @@ from usfutils.load import instantiate_from_config
 from usfutils.format import dict_to_str
 from mcd.utils.metrics import metrics, reg_metrics
 from torch.utils.tensorboard import SummaryWriter
-from mcd.module.mcd_model import MCDModel, \
-    MCDModel_wo_taskMOE, MCDModel_wo_shareAttn
+from mcd.module.main_model import MCDModel, \
+    MCDModel_wo_taskMOE, MCDModel_wo_guideAttn
 from mcd.utils.metrics import huber_loss
 import random
 import numpy as np
@@ -27,8 +27,13 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 if __name__ == "__main__":
+    dataNumber = 4
+    if dataNumber == 0:
+        is_cold_start = True  # 是否冷启动 默认F表示不是冷启动
+    else:
+        is_cold_start = False
     dataset_name = 'mmcd'  # mmcd, ours
-    task = 'MCDModel'  # MCDModel, MCDModel_wo_shareAttn, MCDModel_wo_taskMOE,
+    task = 'MCDModel'  # MCDModel, MCDModel_wo_guideAttn, MCDModel_wo_taskMOE,
 
     if dataset_name == 'mmcd':
         config_path = "mcd/config/train.yaml"
@@ -43,11 +48,11 @@ if __name__ == "__main__":
     config = load_yaml(config_path)
     device = "cuda" if (torch.cuda.is_available() and config.gpu) else "cpu"
     if task == 'MCDModel':
-        model = MCDModel(config=config.model)
+        model = MCDModel(dataNumber, config.model, is_cold_start)
     elif task == 'MCDModel_wo_taskMOE':
-        model = MCDModel_wo_taskMOE(config=config.model)
+        model = MCDModel_wo_taskMOE(dataNumber, config.model, is_cold_start)
     else:
-        model = MCDModel_wo_shareAttn(config=config.model)
+        model = MCDModel_wo_guideAttn(dataNumber, config.model, is_cold_start)
     loss_list = []
 
     set_seed_everything(seed=config.seed)

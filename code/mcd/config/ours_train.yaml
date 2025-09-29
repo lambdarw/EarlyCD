@@ -9,9 +9,9 @@ num_works: 8
 epochs: 100
 lr: 0.00006
 save_threshold: 0.0
-epoch_stop: 10
+epoch_stop: 7
 log_freq: 10
-alpha: 0.8
+alpha: 0.7
 
 data:
   train:
@@ -33,16 +33,18 @@ data:
 model:
   smoothness_ratio: 0
   degree_ratio: 0
-  sparsity_ratio: 0.3
+  decay_rate: 0.5
   v_moe:
     num_feature: 8
     cls_dim: 128
     feature_dim: 768
+    feature_dim2: 768
     feature_hidden_dim: 128
     num_trans_heads: 2
-    dropout: 0.1
+    dropout: 0.2
     moe_in_feature: 128
     moe_hidden_feature: 128
     moe_out_feature: 128
     num_experts: 3
-    k: 1
+    k: 2
+    

@@ -28,8 +28,13 @@ pip install -r requirements.txt
 ```
 
 **Step2: Start training and testing**
+If you want to run the program with a number constraint,
 ``` python
 python main.py
+```
+If you want to run the program with a time constraint,
+``` python
+python main_time.py
 ```
 
 ## 📃 Citation

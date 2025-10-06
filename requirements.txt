@@ -1,5 +1,4 @@
 cnsenti==0.0.7
-dgl==2.2.1
 einops==0.8.1
 facenet_pytorch==2.6.0
 h5py==3.13.0

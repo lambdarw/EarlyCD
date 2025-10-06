@@ -1,16 +1,16 @@
-# MECP: Early-stage Controversy Detection and Popularity forecasting
+# Early Controversy Detection in Short Videos Using Joint Heat Analysis
 
 ## 📌 Overview
-MECP is an early-stage multimodal framework that jointly models controversy detection and popularity prediction via a video-guided viewpoint alignment module and a task-aware Mixture-of-Experts component.
+EarlyCD is an early-stage multimodal framework that jointly models controversy detection and popularity prediction via a video-guided viewpoint modeling and a task-aware Mixture-of-Experts module.
 
 <div align=center>
 <img src="https://github.com/lambdarw/MECP/blob/main/framework.png" width="70%" >
 </div>
 
 ## 🧷 Dataset
-We construct the first English-language short-video dataset TMCD, with 3,061 videos covering 244 real-world topics, annotated with both controversy and popularity scores.
+We construct the first English-language short-video dataset TMCD, with 3,061 videos covering 244 real-world topics, annotated with both controversy and heat scores.
 
-We evaluate our method for event detection on the [TMCD](https://pan.quark.cn/s/d55564522cd3) and [MMCD](https://github.com/skylie-xtj/MM_Controversy_Detection_Released) datasets.
+We evaluate our method for controversy detection on the [TMCD](https://pan.quark.cn/s/d55564522cd3) and [MMCD](https://github.com/skylie-xtj/MM_Controversy_Detection_Released) datasets.
 
 
 ## 🚀 Quick Start
@@ -28,6 +28,7 @@ pip install -r requirements.txt
 ```
 
 **Step2: Start training and testing**
+
 If you want to run the program with a number constraint,
 ``` python
 python main.py
@@ -38,6 +39,6 @@ python main_time.py
 ```
 
 ## 📃 Citation
-Please cite our repository if you use MECP in your work.
+Please cite our repository if you use EarlyCD in your work.
 ```bibtex
 ```
